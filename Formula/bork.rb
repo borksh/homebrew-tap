@@ -22,6 +22,9 @@ class Bork < Formula
 
     man1.install "docs/bork.1"
     prefix.install %w[bin lib test types]
+
+    bash_completion.install "pkg/bash_completions.sh" => "bork"
+    zsh_completion.install "pkg/zsh_completions.sh" => "_bork"
   end
 
   test do
