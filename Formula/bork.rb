@@ -21,7 +21,7 @@ class Bork < Formula
     inreplace files, "/usr/local/", HOMEBREW_PREFIX
 
     man1.install "docs/bork.1"
-    prefix.install %w[bin lib test types]
+    prefix.install %w[bin lib test types pkg]
 
     bash_completion.install "pkg/bash_completions.sh" => "bork"
     zsh_completion.install "pkg/zsh_completions.sh" => "_bork"
