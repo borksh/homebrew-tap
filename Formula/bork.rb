@@ -17,9 +17,6 @@ class Bork < Formula
   end
 
   def install
-    files = %w[types/shells.sh types/pipsi.sh types/cask.sh test/type-pipsi.bats test/type-cask.bats]
-    inreplace files, "/usr/local/", HOMEBREW_PREFIX
-
     man1.install "docs/bork.1"
     prefix.install %w[bin lib test types pkg]
 
